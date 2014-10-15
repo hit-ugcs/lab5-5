@@ -10,7 +10,6 @@
     <th>Lab (10%)</th>
     <th>Class (10%)</th>
     <th>Total</th>
-    <th>Show Details</th>
     <th>Edit Grades</th>
     <th>Delete Student</th>
   </tr>
@@ -25,7 +24,6 @@
     <td><%= student.lab %></td>
     <td><%= student.classdiscussion %></td>
     <td><%= student.total %></td>
-    <td><%= link_to 'Show', student %></td>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
     <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
@@ -35,5 +33,5 @@
 
 <br />
 
-<div class="btn btn-info"><%= link_to 'New Student', new_student_path %></div>
+<div class="center btn btn-info"><%= link_to 'New Student', new_student_path %></div>
 <%= will_paginate @students %>
