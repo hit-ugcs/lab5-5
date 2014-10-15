@@ -1,18 +1,17 @@
 <h1>Grading Worksheet</h1>
 
 <table>
-  <tr>
-    <th>Student ID</th>
-    <th>Name (Chinese)</th>
-    <th>Nickname (English)</th>
-    <th>Project (40%)</th>
-    <th>Final (40%)</th>
-    <th>Lab (10%)</th>
-    <th>Class (10%)</th>
-    <th>Total</th>
-    <th></th>
-    <th></th>
-    <th></th>
+  <tr class=title>
+    <th valign=top width="100">Student ID </th>
+    <th valign=top width="150">Student Name<br>Chinese) </th>
+    <th valign=top width="120">Nick Name<br>English)</th>
+    <th valign=top width="120">Project (40%)</th>
+    <th valign=top width="120">Final (40%)</th>
+    <th valign=top width="120">Lab (10%)</th>
+    <th valign=top width="120">Class (10%)</th>
+    <th valign=top width="80">Total</th>
+    <th valign=top></th>
+    <th valign=top></th>
   </tr>
 
 <% @students.each do |student| %>
@@ -25,7 +24,6 @@
     <td><%= student.lab %></td>
     <td><%= student.classdiscussion %></td>
     <td><%= student.total %></td>
-    <td><%= link_to 'Show', student %></td>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
     <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
