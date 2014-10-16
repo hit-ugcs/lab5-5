@@ -1,6 +1,6 @@
 <h1>Grading Worksheet</h1>
 
-<table>
+<table width="100%">
   <tr>
     <th>Student ID</th>
     <th>Name (Chinese)</th>
@@ -32,5 +32,7 @@
 
 <br />
 
-<div class="center btn btn-info" style="margin: auto; position: absolute; left: 0; right: 0; width: 100px"><%= link_to 'New Student', new_student_path %></div>
 <%= will_paginate @students %>
+
+<div class="center btn btn-info" style="margin: auto; position: absolute; left: 0; right: 0; width: 100px"><%= link_to 'New Student', new_student_path %></div>
+

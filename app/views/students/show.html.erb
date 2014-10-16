@@ -1,45 +1,31 @@
 <p id="notice"><%= notice %></p>
+<h3>Students Grade</h3>
 
-<p>
-  <b>Student:</b>
-  <%= @student.student_id %>
-</p>
+<table>
+    <tr><td>Student ID :</td>
+    <td><%= @student.student_id %></td></tr>
 
-<p>
-  <b>Name:</b>
-  <%= @student.name %>
-</p>
+    <tr><td>Name (Chinese) :</td>
+    <td><%= @student.name %></td></tr>
 
-<p>
-  <b>Nickname:</b>
-  <%= @student.nickname %>
-</p>
+    <tr><td>Nickname (English) :</td>
+    <td><%= @student.nickname %></td></tr>
 
-<p>
-  <b>Project (40%):</b>
-  <%= @student.project %>%
-</p>
+    <tr><td>Project (40%) :</td>
+    <td><%= @student.project %></td></tr>
 
-<p>
-  <b>Final (40%):</b>
-  <%= @student.final %>%
-</p>
+    <tr><td>Final (40%) :</td>
+    <td><%= @student.final %></td></tr>
 
-<p>
-  <b>Lab (10%):</b>
-  <%= @student.lab %>%
-</p>
+    <tr><td>Lab (10%) :</td>
+    <td><%= @student.lab %></td></tr>
 
-<p>
-  <b>Class (10%):</b>
-  <%= @student.classdiscussion %>%
-</p>
+    <tr><td>Class discussion (10%) :</td>
+    <td><%= @student.classdiscussion %></td></tr>
 
-<p>
-  <b>Total:</b>
-  <%= @student.total %>%
-</p>
-
+    <tr><td>Total :</td>
+    <td><%= @student.total %></td></tr>
+</table>
 
 <div class="btn btn-info"><%= link_to 'Edit', edit_student_path(@student) %></div>
 <div class="btn btn-info"><%= link_to 'Back', students_path %></div>

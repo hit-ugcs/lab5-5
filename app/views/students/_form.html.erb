@@ -11,34 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    Student ID<br />
-    <%= f.text_field :student_id %>
-  </div>
-  <div class="field">
-    Name (Chinese)<br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    Nickname (English)<br />
-    <%= f.text_field :nickname %>
-  </div>
-  <div class="field">
-    Project (40%)<br />
-    <%= f.number_field :project %>
-  </div>
-  <div class="field">
-    Final (40%)<br />
-    <%= f.number_field :final %>
-  </div>
-  <div class="field">
-    Lab (10%)<br />
-    <%= f.number_field :lab %>
-  </div>
-  <div class="field">
-    Class discussion (10%)<br />
-    <%= f.number_field :classdiscussion %>
-  </div>
+  <table>
+    <tr><td>Student ID :</td>
+    <td><%= f.text_field :student_id %></td></tr>
+
+    <tr><td>Name (Chinese) :</td>
+    <td><%= f.text_field :name %></td></tr>
+
+    <tr><td>Nickname (English) :</td>
+    <td><%= f.text_field :nickname %></td></tr>
+
+    <tr><td>Project (40%) :</td>
+    <td><%= f.text_field :project %></td></tr>
+
+    <tr><td>Final (40%) :</td>
+    <td><%= f.text_field :final %></td></tr>
+
+    <tr><td>Lab (10%) :</td>
+    <td><%= f.text_field :lab %></td></tr>
+
+    <tr><td>Class discussion (10%) :</td>
+    <td><%= f.text_field :classdiscussion %></td></tr>
+</table>
   <div class="actions">
     <%= f.submit %>
   </div>
