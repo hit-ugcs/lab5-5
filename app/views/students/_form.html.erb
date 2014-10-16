@@ -30,10 +30,10 @@
     <tr><td>Lab (10%) :</td>
     <td><%= f.text_field :lab %></td></tr>
 
-    <tr><td>Class discussion (10%) :</td>
+    <tr><td>Class Discussion (10%) :</td>
     <td><%= f.text_field :classdiscussion %></td></tr>
 </table>
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag "Submit", :class => "btn btn-primary" %>
   </div>
 <% end %>

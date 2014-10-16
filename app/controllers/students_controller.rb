@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
   # GET /students.json
 
   def index
-    @students = Student.paginate :page => params[:page], :per_page => 2
+    @students = Student.paginate :page => params[:page], :per_page => 10
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @students }
@@ -45,7 +45,7 @@ class StudentsController < ApplicationController
 
     respond_to do |format|
       if @student.save
-        format.html { redirect_to @student, notice: 'Student was successfully created.' }
+        format.html { redirect_to @student, notice: "Student #{@student.student_id} was successfully created." }
         format.json { render json: @student, status: :created, location: @student }
       else
         format.html { render action: "new" }
@@ -63,7 +63,7 @@ class StudentsController < ApplicationController
       if @student.update_attributes(params[:student])
         new_total = @student.calc_total
         @student.update_attributes total: new_total
-        format.html { redirect_to @student, notice: 'Student was successfully updated.' }
+        format.html { redirect_to @student, notice: "Student #{@student.student_id} was successfully modified." }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
