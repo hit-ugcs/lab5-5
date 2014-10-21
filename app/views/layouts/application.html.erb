@@ -2,7 +2,11 @@
 <html>
 <head>
   <title>Grading Sheet</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "students", :media => :screen %>
+  <%= stylesheet_link_tag    "scaffolds", :media => :screen %>
+  <%= stylesheet_link_tag    "tablecloth", :media => :screen %>
+  <%= stylesheet_link_tag 'print', :media => :print %>
+  <%= javascript_include_tag 'print' %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
