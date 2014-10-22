@@ -1,4 +1,5 @@
-<h1 class="noprint">Grading Worksheet</h1>
+<div class="screen_version">
+<h1>Grading Worksheet</h1>
 
 <table width="100%">
   <tr>
@@ -10,8 +11,8 @@
     <th>Lab (10%)</th>
     <th>Class (10%)</th>
     <th>Total</th>
-    <th class="noprint" display="hidden">Edit Grades</th>
-    <th class="noprint">Delete Student</th>
+    <th>Edit Grades</th>
+    <th>Delete Student</th>
 <% @students.each do |student| %>
   <tr>
     <td><%= student.student_id %></td>
@@ -22,18 +23,43 @@
     <td><%= student.lab %>%</td>
     <td><%= student.classdiscussion %>%</td>
     <td><%= student.total %>%</td>
-    <td class="noprint"><%= link_to 'Edit', edit_student_path(student) %></td>
-    <td class="noprint"><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Edit', edit_student_path(student) %></td>
+    <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
-
 <br />
-<div class="noprint">
+
 <%= will_paginate @students %>
 <br />
 <%= link_to 'New Student', new_student_path, class: "btn btn-large btn-primary" %>
 <%= link_to_function 'Print', "javascript:print()", class: "btn btn-large btn-primary" %>
+</div>
+
+<div class="print_version">
+<table width="100%">
+  <tr>
+    <th>Student ID</th>
+    <th>Name (Chinese)</th>
+    <th>Nickname (English)</th>
+    <th>Project (40%)</th>
+    <th>Final (40%)</th>
+    <th>Lab (10%)</th>
+    <th>Class (10%)</th>
+    <th>Total</th>
+<% @students_print.each do |student| %>
+  <tr>
+    <td><%= student.student_id %></td>
+    <td><%= student.name %></td>
+    <td><%= student.nickname %></td>
+    <td><%= student.project %>%</td>
+    <td><%= student.final %>%</td>
+    <td><%= student.lab %>%</td>
+    <td><%= student.classdiscussion %>%</td>
+    <td><%= student.total %>%</td>
+  </tr>
+<% end %>
+</table>
 </div>
 
