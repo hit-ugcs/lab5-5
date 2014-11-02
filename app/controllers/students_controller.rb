@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
-
+  before_filter:authenticate_user!
   def index
     @students_print = Student.all
     @students = Student.paginate :page => params[:page], :per_page => 10
