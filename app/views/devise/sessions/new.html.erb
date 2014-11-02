@@ -1,0 +1,18 @@
+<h2>Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<table>
+    <tr><td>User Email:</td>
+    <td><%= f.email_field :email %></td></tr>
+
+    <tr><td>Pssword:</td>
+    <td><%= f.password_field :password, autocomplete: "off" %></td></tr>
+
+</table>
+
+  <div class="actions">
+    <%= f.submit "Log in", :class => "btn btn-primary"%>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
