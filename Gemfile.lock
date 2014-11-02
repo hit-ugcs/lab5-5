@@ -109,10 +109,10 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   bootstrap-will_paginate
-  coffee-rails (~> 3.2.1)
+  coffee-rails
   jquery-rails
   pg
-  rails (= 3.2.16)
-  sass-rails (~> 3.2.3)
+  rails
+  sass-rails
   uglifier (>= 1.0.3)
   will_paginate
