@@ -11,7 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141013110313) do
+ActiveRecord::Schema.define(:version => 20141102085749) do
+
+  create_table "discussions", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "score"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "labs", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "score"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "projects", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "score"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "students", :force => true do |t|
     t.string   "student_id"
@@ -22,8 +43,29 @@ ActiveRecord::Schema.define(:version => 20141013110313) do
     t.integer  "lab"
     t.integer  "classdiscussion"
     t.integer  "total"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "classdiscussion1"
+    t.integer  "classdiscussion2"
+    t.integer  "classdiscussion3"
+    t.integer  "classdiscussion4"
+    t.integer  "classdiscussion5"
+    t.integer  "classdiscussion6"
+    t.integer  "classdiscussion7"
+    t.integer  "classdiscussion8"
+    t.integer  "classdiscussion9"
+    t.integer  "classdiscussion10"
+    t.integer  "classdiscussion11"
+    t.integer  "lab1"
+    t.integer  "lab2"
+    t.integer  "lab3"
+    t.integer  "lab4"
+    t.integer  "lab5"
+    t.integer  "lab6"
+    t.integer  "lab7"
+    t.integer  "project1"
+    t.integer  "project2"
+    t.integer  "project3"
   end
 
 end

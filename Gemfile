@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+#source 'https://rubygems.org'
 
 gem 'rails'
 
@@ -11,6 +11,7 @@ group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'bootstrap-sass'
+  #gem 'bootstrap_form'
   gem 'will_paginate'
   gem 'bootstrap-will_paginate'
 

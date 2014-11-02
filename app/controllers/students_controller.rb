@@ -26,7 +26,8 @@ class StudentsController < ApplicationController
   # GET /students/new.json
   def new
     @student = Student.new
-
+    @labs = Array.new
+    (1..7).each { @labs << Lab.create(:student_id => @student.id) }
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @student }
@@ -42,6 +43,9 @@ class StudentsController < ApplicationController
   # POST /students.json
   def create
     @student = Student.new(params[:student])
+    @labs.to_a.each_with_index do |lab, index|
+      lab.score = params[:student][:labs]
+    end
     @student.calc_total
 
     respond_to do |format|
