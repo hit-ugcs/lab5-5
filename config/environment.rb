@@ -1,5 +1,6 @@
-# Load the rails application
+require 'will_paginate'
+# Load the Rails application.
 require File.expand_path('../application', __FILE__)
 
-# Initialize the rails application
-Lab3::Application.initialize!
+# Initialize the Rails application.
+Rails.application.initialize!

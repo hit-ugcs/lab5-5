@@ -6,9 +6,7 @@ class Student < ActiveRecord::Base
 
   validates :student_id, presence: true, uniqueness: true, length: {is: 10}
 
-  has_many :labs, :dependent => :destroy
-  has_many :projects, :dependent => :destroy
-  has_many :discussions, :dependent => :destroy
+
 
   validates :classdiscussion, numericality: {greater_than_or_equal_to: 0}
   validates :final, numericality: {greater_than_or_equal_to: 0}
@@ -23,4 +21,6 @@ class Student < ActiveRecord::Base
     self.final = self.final * 0.4
     self.total = self.final + self.lab + self.classdiscussion + self.project
   end
+
+
 end
