@@ -1,0 +1,84 @@
+/* 
+
+	TableCloth	
+	by Alen Grakalic, brought to you by cssglobe.com
+	
+*/
+/* general styles */
+/* line 11, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+table, td {
+  font: 100% Arial, Helvetica, sans-serif;
+}
+
+/* line 14, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+/* line 15, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+th, td {
+  text-align: left;
+  padding: .5em;
+  border: 1px solid #fff;
+}
+
+/* line 16, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+th {
+  background: #328aa4 url(tr_back.gif) repeat-x;
+  color: #fff;
+}
+
+/* line 17, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+td {
+  background: #e5f1f4;
+}
+
+/* tablecloth styles */
+/* line 21, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+tr.even td {
+  background: #e5f1f4;
+}
+
+/* line 22, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+tr.odd td {
+  background: #f8fbfc;
+}
+
+/* line 24, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+th.over, tr.even th.over, tr.odd th.over {
+  background: #4a98af;
+}
+
+/* line 25, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+th.down, tr.even th.down, tr.odd th.down {
+  background: #bce774;
+}
+
+/* line 28, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+td.over, tr.even td.over, tr.odd td.over {
+  background: #ecfbd4;
+}
+
+/* line 29, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+td.down, tr.even td.down, tr.odd td.down {
+  background: #bce774;
+  color: #fff;
+}
+
+/* line 30, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+td.selected, tr.even td.selected, tr.odd td.selected {
+  background: #bce774;
+  color: #555;
+}
+
+/* use this if you want to apply different styleing to empty table cells*/
+/* line 33, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+td.empty, tr.odd td.empty, tr.even td.empty {
+  background: #fff;
+}
+
+/* line 34, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/tablecloth.css.scss */
+.noprint {
+  display: hidden;
+}

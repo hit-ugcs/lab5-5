@@ -1,0 +1,9 @@
+/* line 2, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/print.css.scss */
+.screen_version {
+  display: none;
+}
+
+/* line 3, /home/steveyang94/Documents/hit-ugcs-lab5-5/app/assets/stylesheets/print.css.scss */
+.print_version {
+  display: inline;
+}
