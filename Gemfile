@@ -11,10 +11,11 @@ gem 'protected_attributes'
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
+#group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'bootstrap-sass'
+  gem 'autoprefixer-rails'
   #gem 'bootstrap_form'
   gem 'will_paginate'
   gem 'bootstrap-will_paginate'
@@ -23,7 +24,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-end
+#end
 
 gem 'jquery-rails'
 
