@@ -15,7 +15,9 @@ gem 'autoprefixer-rails'
 #gem 'bootstrap_form'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-
+group :production do
+  gem 'thin'
+end
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', :platforms => :ruby
 
