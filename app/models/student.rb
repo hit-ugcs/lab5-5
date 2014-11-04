@@ -21,4 +21,6 @@ class Student < ActiveRecord::Base
     self.final = self.final * 0.4
     self.total = self.final + self.lab + self.classdiscussion + self.project
   end
+
+
 end

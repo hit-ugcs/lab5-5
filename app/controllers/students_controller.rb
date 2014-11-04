@@ -43,7 +43,6 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(params[:student])
     @student.calc_total
-
     respond_to do |format|
       if @student.save
         format.html { redirect_to @student, notice: "Student #{@student.student_id} was successfully created." }

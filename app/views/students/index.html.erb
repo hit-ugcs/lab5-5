@@ -11,10 +11,28 @@
     <th>Lab (10%)</th>
     <th>Class (10%)</th>
     <th>Total</th>
+    <th>Range</th>
     <th>Edit Grades</th>
     <th>Delete Student</th>
+
+<% count = 0 %>  
+<% rank = Array.new %>  
+<% @students.each do |student| %>
+    <% if student.total >= 60 %>
+        <% count = count+1 %>
+        <% rank.push(student.total)%>
+    <% end %>
+<% end %>
+<%  rank = rank.sort %>
+<% rank = rank.reverse %>
+<% countA = rank[count*0.15] %>  
+<% countB = rank[count*0.5] %>  
+<% countC = rank[count*0.85] %>  
+<% countD = rank[count-1] %>  
+   
 <% @students.each do |student| %>
   <tr>
+    
     <td><%= student.student_id %></td>
     <td><%= student.name %></td>
     <td><%= student.nickname %></td>
@@ -23,6 +41,18 @@
     <td><%= student.lab %>%</td>
     <td><%= student.classdiscussion %>%</td>
     <td><%= student.total %>%</td>
+    <% if student.total < 60 %>
+        <td><%= "F" %></td>
+    <%end%>
+    <% if student.total >= countA %>
+        <td><%= "A" %></td>
+    <% elsif student.total >= countB %>
+        <td><%= "B" %></td>
+    <% elsif student.total >= countC %>
+        <td><%= "C" %></td>
+    <% elsif student.total >= countD %>
+        <td><%= "D" %></td>
+    <%end%>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
     <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
