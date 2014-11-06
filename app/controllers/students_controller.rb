@@ -45,6 +45,10 @@ class StudentsController < ApplicationController
 
   def send_report
     @student = Student.find(params[:id])
+    if Sender.all == [] then
+      redirect_to students_url
+      return false
+    end
     @sender = Sender.find(1)
     UserMailer.send_report(@student, @sender).deliver
     respond_to do |format|
