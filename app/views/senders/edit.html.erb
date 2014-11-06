@@ -13,7 +13,8 @@
     </div>
   <% end %>
   <p>
-    Gmail example: example@gmail; example; example_passwprd; smtp.gmail.com; 587
+    Gmail example: example@gmail.com; example; example_passwprd; smtp.gmail.com; 587 <br />
+    For other mail service providers, please refer to SMTP server settings.
   </p>
   <table>
     <tr><td>Email :</td>
@@ -23,7 +24,7 @@
     <td><%= f.text_field :smtp_user %></td></tr>
 
     <tr><td>SMTP Password :</td>
-    <td><%= f.text_field :smtp_password %></td></tr>
+    <td><%= f.password_field :smtp_password %></td></tr>
 
     <tr><td>SMTP Address :</td>
     <td><%= f.text_field :smtp_address %></td></tr>
@@ -34,5 +35,6 @@
 </table>
   <div class="actions">
     <%= submit_tag "Submit", :class => "btn btn-primary" %>
+    <%= link_to 'Back', students_url, class: "btn btn-info" %>
   </div>
 <% end %>
