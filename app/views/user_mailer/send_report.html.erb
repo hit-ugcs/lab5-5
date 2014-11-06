@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Hello, <%= @user.name %>. This is your score:
+    </p>
+    <table>
+        <tr><td>Student ID :</td>
+        <td><%= @user.student_id %></td></tr>
+
+        <tr><td>Name (Chinese) :</td>
+        <td><%= @user.name %></td></tr>
+
+        <tr><td>Nickname (English) :</td>
+        <td><%= @user.nickname %></td></tr>
+
+        <tr><td>Project (x40%) :</td>
+        <td><%= @user.project %></td></tr>
+
+        <tr><td>Final (x40%) :</td>
+        <td><%= @user.final %></td></tr>
+
+        <tr><td>Lab (x10%) :</td>
+        <td><%= @user.lab %></td></tr>
+
+        <tr><td>Class discussion (x10%) :</td>
+        <td><%= @user.classdiscussion %></td></tr>
+
+        <tr><td>Total :</td>
+        <td><%= @user.total %></td></tr>
+    </table>
+  </body>
+</html>

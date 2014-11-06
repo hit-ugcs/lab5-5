@@ -3,15 +3,14 @@ class Student < ActiveRecord::Base
   attr_accessible :lab1, :lab2, :lab3, :lab4, :lab5, :lab6, :lab7
   attr_accessible :project1, :project2, :project3, :classdiscussion1, :classdiscussion2, :classdiscussion3
   attr_accessible :classdiscussion4, :classdiscussion5, :classdiscussion6, :classdiscussion7, :classdiscussion8, :classdiscussion9, :classdiscussion10, :classdiscussion11
+  attr_accessible :email, :mobile, :address
 
   validates :student_id, presence: true, uniqueness: true, length: {is: 10}
-
-
-
-  validates :classdiscussion, numericality: {greater_than_or_equal_to: 0}
-  validates :final, numericality: {greater_than_or_equal_to: 0}
-  validates :lab, numericality: {greater_than_or_equal_to: 0}
-  validates :project, numericality: {greater_than_or_equal_to: 0}
+  
+  validates :classdiscussion1, presence: true, numericality: {greater_than_or_equal_to: 0}
+  validates :final, presence: true, numericality: {greater_than_or_equal_to: 0}
+  validates :lab1, presence: true, numericality: {greater_than_or_equal_to: 0}
+  validates :project1, presence: true, numericality: {greater_than_or_equal_to: 0}
 
 
   def calc_total

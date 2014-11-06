@@ -1,0 +1,43 @@
+<h2>Edit Student Information</h2>
+
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <tr><td>Student ID :</td>
+    <td><%= f.text_field :student_id %></td></tr>
+
+    <tr><td>Name (Chinese) :</td>
+    <td><%= f.text_field :name %></td></tr>
+
+    <tr><td>Nickname (English) :</td>
+    <td><%= f.text_field :nickname %></td></tr>
+
+    <tr><td>Mobile :</td>
+    <td><%= f.text_field :mobile %></td></tr>
+
+    <tr><td>E-mail :</td>
+    <td><%= f.text_field :email %></td></tr>
+
+    <tr><td>Address :</td>
+    <td><%= f.text_field :address %></td></tr>
+
+</table>
+  <div class="actions">
+    <%= submit_tag "Submit", :class => "btn btn-primary" %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Show', @student, class: "btn btn-success" %>
+<%= link_to 'Back', students_path, class: "btn btn-info" %>

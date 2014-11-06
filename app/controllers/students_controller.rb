@@ -38,6 +38,16 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
+  # GET /students/1/edit_information
+  def edit_info
+    @student = Student.find(params[:id])
+  end
+
+  def send_report
+    @student = Student.find(params[:id])
+    UserMailer.send_report(@student).deliver
+  end
+
   # POST /students
   # POST /students.json
   def create
@@ -45,6 +55,7 @@ class StudentsController < ApplicationController
     @student.calc_total
     respond_to do |format|
       if @student.save
+
         format.html { redirect_to @student, notice: "Student #{@student.student_id} was successfully created." }
         format.json { render json: @student, status: :created, location: @student }
       else

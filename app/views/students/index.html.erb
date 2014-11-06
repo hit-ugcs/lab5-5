@@ -13,7 +13,9 @@
     <th>Total</th>
     <th>Grade</th>
     <th>Edit Scores</th>
+    <th>Edit Student Information</th>
     <th>Delete Student</th>
+    <th>Send Email Report</th>
 
 <% count = 0 %>  
 <% rank = Array.new %>  
@@ -54,7 +56,9 @@
         <td><%= "D" %></td>
     <%end%>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
+    <td><%= link_to "Info", edit_info_student_path(student) %></td>
     <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Send', send_report_student_path(student) %></td>
   </tr>
 <% end %>
 </table>

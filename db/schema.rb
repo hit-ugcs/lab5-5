@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104120121) do
+ActiveRecord::Schema.define(version: 20141106070515) do
 
   create_table "students", force: true do |t|
     t.string   "student_id"
@@ -45,6 +45,9 @@ ActiveRecord::Schema.define(version: 20141104120121) do
     t.integer  "project1"
     t.integer  "project2"
     t.integer  "project3"
+    t.string   "email"
+    t.string   "mobile"
+    t.string   "address"
   end
 
   create_table "users", force: true do |t|

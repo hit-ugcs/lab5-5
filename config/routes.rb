@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :students
+  resources :students do
+    member do
+      post 'edit_info'
+      get 'edit_info'
+      post 'send_report'
+      get 'send_report'
+    end
+  end
 
 
   # The priority is based upon order of creation:
