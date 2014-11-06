@@ -45,7 +45,12 @@ class StudentsController < ApplicationController
 
   def send_report
     @student = Student.find(params[:id])
-    UserMailer.send_report(@student).deliver
+    @sender = Sender.find(1)
+    UserMailer.send_report(@student, @sender).deliver
+    respond_to do |format|
+      format.html { redirect_to students_url }
+      format.json { head :no_content }
+    end
   end
 
   # POST /students

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-
+  resources :senders
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

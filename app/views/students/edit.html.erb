@@ -1,4 +1,4 @@
-<h2>Edit Student Score</h2>
+<h2>Edit Student <%= @student.student_id %>'s Score</h2>
 
 <%= form_for(@student) do |f| %>
   <% if @student.errors.any? %>
@@ -14,15 +14,6 @@
   <% end %>
   <p>Note: Please enter the scores in percentage form (out of 100)</p>
   <table>
-    <tr><td>Student ID :</td>
-    <td><%= f.text_field :student_id %></td></tr>
-
-    <tr><td>Name (Chinese) :</td>
-    <td><%= f.text_field :name %></td></tr>
-
-    <tr><td>Nickname (English) :</td>
-    <td><%= f.text_field :nickname %></td></tr>
-
     <tr><td>Project 1 :</td>
     <td><%= f.text_field :project1 %></td></tr>
 

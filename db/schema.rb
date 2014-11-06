@@ -11,7 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141106070515) do
+ActiveRecord::Schema.define(version: 20141106115512) do
+
+  create_table "mail_senders", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
+    t.string   "smtp_user"
+    t.string   "smtp_password"
+    t.string   "smtp_address"
+    t.integer  "smtp_port"
+  end
+
+  create_table "mailsenders", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
+    t.string   "smtp_user"
+    t.string   "smtp_password"
+    t.string   "smtp_address"
+    t.integer  "smtp_port"
+  end
+
+  create_table "senders", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
+    t.string   "smtp_user"
+    t.string   "smtp_password"
+    t.string   "smtp_address"
+    t.integer  "smtp_port"
+  end
 
   create_table "students", force: true do |t|
     t.string   "student_id"

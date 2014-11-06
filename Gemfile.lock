@@ -132,6 +132,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  bcrypt
   bootstrap-sass
   bootstrap-will_paginate
   coffee-rails

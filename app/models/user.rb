@@ -13,4 +13,5 @@ class User < ActiveRecord::Base
 	validates_length_of         :password,   :minimum => 6,:message=>"Length of password must be >=6 and <= 20"      
 	validates_presence_of     :password_confirmation,  :message =>"Please confirm your password!"  
 	validates_confirmation_of :password,  :message => "Please confirm two entries are the same!"
+
 end
